@@ -19,6 +19,7 @@ private:
     int size;
 
 public:
+    int sizes() const;
     linkedlist();
     linkedlist(int data);
     ~linkedlist();
@@ -29,6 +30,7 @@ public:
     int del_beg();
     int show();
     int is_empty();
+    linkedlist operator+(const linkedlist &other) const;
 };
 
 #endif

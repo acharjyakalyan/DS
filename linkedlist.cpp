@@ -73,3 +73,25 @@ int linkedlist::show() {
 int linkedlist::is_empty() {
     return Head == NULL;
 }
+
+linkedlist linkedlist:: operator+(const linkedlist& other) const  {
+        linkedlist result;
+        Node* current1 = this->Head;
+        Node* current2 = other.Head;
+
+        while (current1 || current2) {
+            int sum = (current1 ? current1->data : 0) + (current2 ? current2->data : 0);
+            result.insert_beg(sum);
+
+            if (current1) current1 = current1->next;
+            if (current2) current2 = current2->next;
+        }
+
+        return result;
+    
+};
+
+
+int linkedlist::sizes ()const{
+    return size;
+}
