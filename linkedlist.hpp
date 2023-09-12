@@ -31,6 +31,9 @@ public:
     int show();
     int is_empty();
     linkedlist operator+(const linkedlist &other) const;
+    linkedlist operator-(const linkedlist &other) const;
+    linkedlist operator*(const linkedlist &other) const;
+    linkedlist operator/(const linkedlist &other) const;
 };
 
 #endif
