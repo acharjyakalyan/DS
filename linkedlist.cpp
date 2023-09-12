@@ -145,3 +145,12 @@ linkedlist linkedlist:: operator/(const linkedlist& other) const  {
 int linkedlist::sizes ()const{
     return size;
 }
+
+ostream& operator<<(std::ostream& os, const linkedlist& list) {
+    Node* current = list.Head;
+    while (current) {
+        os << current->data << " ";
+        current = current->next;
+    }
+    return os;
+}

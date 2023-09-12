@@ -34,6 +34,8 @@ public:
     linkedlist operator-(const linkedlist &other) const;
     linkedlist operator*(const linkedlist &other) const;
     linkedlist operator/(const linkedlist &other) const;
+
+    friend ostream& operator<<(ostream& os, const linkedlist& list);
 };
 
 #endif
